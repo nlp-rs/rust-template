@@ -1,0 +1,13 @@
+[package]
+name = "rust-template"
+version = "0.0.0"
+authors = [
+	"First Name Last Name, <yourname@gmail.com>",
+	"Another Person <anotherperson@outlook.com>"
+]
+description = "Your description of the Rust library"
+readme = "README.md"
+license = "MIT"
+edition = "2021"
+rust-version = "1.63.0"
+

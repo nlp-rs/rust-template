@@ -1,4 +1,3 @@
-var sourcesIndex = JSON.parse('{\
-"rust_template":["",[],["lib.rs"]]\
-}');
+var sourcesIndex = {};
+sourcesIndex["rust_template"] = {"name":"","files":["lib.rs"]};
 createSourceSidebar();

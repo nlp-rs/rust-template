@@ -51,7 +51,7 @@ jobs:
     - name: Run tests
       uses: actions-rs/tarpaulin@v0.1
     - name: Run fuzz tests
-      run: >
+      run: |
         cargo install cargo-fuzz
         cargo fuzz --version
         cargo fuzz run fuzz_target_1

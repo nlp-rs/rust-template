@@ -15,7 +15,7 @@ Repository template to get quickly started with writing Rust libraries, ready fo
    - [x] Running Rustfmt and Clippy for detecting formatting and linting errors, respectively
    - [x] Daily, midnight scheduled security audits of Rust packages with [`actions-rs/audit-check`](https://github.com/actions-rs/audit-check)
    - [ ] Generating performance benchmark graphs, auto-publishing to GitHub Pages
-   - [ ] Documentation of API docs and mdBook using GitHub Pages
+   - [x] Documentation of API docs and mdBook using GitHub Pages
    - [ ] Semantic version bumping, `CHANGELOG.md` updates, and new package releases
 
 ## Configure

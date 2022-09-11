@@ -8,7 +8,7 @@ Repository template to get quickly started with writing Rust libraries, ready fo
 ## Features
  - [x] Remote development support with [GitHub Codespaces](https://github.com/features/codespaces)
  - [x] Debugging with the [LLDB Debugger](https://lldb.llvm.org/) tool in Visual Studio Code ([VSCode Marketplace](https://marketplace.visualstudio.com/items?itemName=vadimcn.vscode-lldb))
- - [ ] Fuzz testing with LLVM's [libFuzzer](https://llvm.org/docs/LibFuzzer.html) tool and [`cargo fuzz`](https://github.com/rust-fuzz/cargo-fuzz)
+ - [x] Fuzz testing with LLVM's [libFuzzer](https://llvm.org/docs/LibFuzzer.html) tool and [`cargo fuzz`](https://github.com/rust-fuzz/cargo-fuzz) ([Reference](https://rust-fuzz.github.io/book/introduction.html))
  - [x] Performance benchmarks in Rust with Criterion and Iai (suitable to run in GitHub Actions CI environments)
  - [x] CI/CD support with [GitHub Actions](https://github.com/features/actions), allowing to automate:
    - [x] Running tests and benchmarks
@@ -33,7 +33,7 @@ Repository template to get quickly started with writing Rust libraries, ready fo
 
 ## Install
 ```shell
-cargo install {{library}}
+cargo add {{library}}
 ```
 
 ## License

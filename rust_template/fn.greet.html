@@ -1,0 +1,50 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="generator" content="rustdoc"><meta name="description" content="Rust Repository Template 🦀"><meta name="keywords" content="rust, rustlang, rust-lang, greet"><title>greet in rust_template - Rust</title><link rel="preload" as="font" type="font/woff2" crossorigin href="../SourceSerif4-Regular.ttf.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../FiraSans-Regular.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../FiraSans-Medium.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../SourceCodePro-Regular.ttf.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../SourceSerif4-Bold.ttf.woff2"><link rel="preload" as="font" type="font/woff2" crossorigin href="../SourceCodePro-Semibold.ttf.woff2"><link rel="stylesheet" href="../normalize.css"><link rel="stylesheet" href="../rustdoc.css" id="mainThemeStyle"><link rel="stylesheet" href="../ayu.css" disabled><link rel="stylesheet" href="../dark.css" disabled><link rel="stylesheet" href="../light.css" id="themeStyle"><script id="default-settings" ></script><script src="../storage.js"></script><script defer src="sidebar-items.js"></script><script defer src="../main.js"></script><noscript><link rel="stylesheet" href="../noscript.css"></noscript><link rel="alternate icon" type="image/png" href="../favicon-16x16.png"><link rel="alternate icon" type="image/png" href="../favicon-32x32.png"><link rel="icon" type="image/svg+xml" href="../favicon.svg"></head><body class="rustdoc fn"><!--[if lte IE 11]><div class="warning">This old browser is unsupported and will most likely display funky things.</div><![endif]--><nav class="mobile-topbar"><button class="sidebar-menu-toggle">&#9776;</button><a class="sidebar-logo" href="../rust_template/index.html"><div class="logo-container"><img class="rust-logo" src="../rust-logo.svg" alt="logo"></div></a><h2 class="location"></h2></nav><nav class="sidebar"><a class="sidebar-logo" href="../rust_template/index.html"><div class="logo-container"><img class="rust-logo" src="../rust-logo.svg" alt="logo"></div></a><div class="sidebar-elems"><h2 class="location"><a href="index.html">In rust_template</a></h2></div></nav><main><div class="width-limiter"><div class="sub-container"><a class="sub-logo-container" href="../rust_template/index.html"><img class="rust-logo" src="../rust-logo.svg" alt="logo"></a><nav class="sub"><form class="search-form"><div class="search-container"><span></span><input class="search-input" name="search" autocomplete="off" spellcheck="false" placeholder="Click or press ‘S’ to search, ‘?’ for more options…" type="search"><div id="help-button" title="help" tabindex="-1"><button type="button">?</button></div><div id="settings-menu" tabindex="-1"><a href="../settings.html" title="settings"><img width="22" height="22" alt="Change settings" src="../wheel.svg"></a></div></div></form></nav></div><section id="main-content" class="content"><div class="main-heading"><h1 class="fqn"><span class="in-band">Function <a href="index.html">rust_template</a>::<wbr><a class="fn" href="#">greet</a><button id="copy-path" onclick="copy_path(this)" title="Copy item path to clipboard"><img src="../clipboard.svg" width="19" height="18" alt="Copy item path"></button></span></h1><span class="out-of-band"><a class="srclink" href="../src/rust_template/lib.rs.html#4-6">source</a> · <a id="toggle-all-docs" href="javascript:void(0)" title="collapse all docs">[<span class="inner">&#x2212;</span>]</a></span></div><div class="docblock item-decl"><pre class="rust fn"><code>pub fn greet()</code></pre></div><details class="rustdoc-toggle top-doc" open><summary class="hideme"><span>Expand description</span></summary><div class="docblock"><h2 id="rust-repository-template-"><a href="#rust-repository-template-">Rust Repository Template 🦀</a></h2>
+<p><a href="./LICENSE"><img src="https://img.shields.io/badge/license-MIT-green" alt="License" /></a>
+<a href="https://github.com/nlp-rs/rust-template/actions/workflows/main.yml"><img src="https://github.com/nlp-rs/rust-template/actions/workflows/main.yml/badge.svg" alt="CI" /></a>
+<a href="https://github.com/nlp-rs/rust-template/actions/workflows/security-audit.yml"><img src="https://github.com/nlp-rs/rust-template/actions/workflows/security-audit.yml/badge.svg" alt="Security audit" /></a></p>
+<p>Repository template to get quickly started with writing Rust libraries, ready for distributing.</p>
+<h3 id="features"><a href="#features">Features</a></h3>
+<ul>
+<li><input disabled="" type="checkbox" checked=""/>
+Remote development support with <a href="https://github.com/features/codespaces">GitHub Codespaces</a></li>
+<li><input disabled="" type="checkbox" checked=""/>
+Debugging with the <a href="https://lldb.llvm.org/">LLDB Debugger</a> tool in Visual Studio Code (<a href="https://marketplace.visualstudio.com/items?itemName=vadimcn.vscode-lldb">VSCode Marketplace</a>)</li>
+<li><input disabled="" type="checkbox" checked=""/>
+Fuzz testing with LLVM’s <a href="https://llvm.org/docs/LibFuzzer.html">libFuzzer</a> tool and <a href="https://github.com/rust-fuzz/cargo-fuzz"><code>cargo fuzz</code></a> (<a href="https://rust-fuzz.github.io/book/introduction.html">Reference</a>)</li>
+<li><input disabled="" type="checkbox" checked=""/>
+Performance benchmarks in Rust with Criterion and Iai (suitable to run in GitHub Actions CI environments)</li>
+<li><input disabled="" type="checkbox" checked=""/>
+CI/CD support with <a href="https://github.com/features/actions">GitHub Actions</a>, allowing to automate:
+<ul>
+<li><input disabled="" type="checkbox" checked=""/>
+Running tests and benchmarks</li>
+<li><input disabled="" type="checkbox" checked=""/>
+Running Rustfmt and Clippy for detecting formatting and linting errors, respectively</li>
+<li><input disabled="" type="checkbox" checked=""/>
+Daily, midnight scheduled security audits of Rust packages with <a href="https://github.com/actions-rs/audit-check"><code>actions-rs/audit-check</code></a></li>
+<li><input disabled="" type="checkbox"/>
+Generating performance benchmark graphs, auto-publishing to GitHub Pages</li>
+<li><input disabled="" type="checkbox"/>
+Documentation of API docs and mdBook using GitHub Pages</li>
+<li><input disabled="" type="checkbox"/>
+Semantic version bumping, <code>CHANGELOG.md</code> updates, and new package releases</li>
+</ul>
+</li>
+</ul>
+<h3 id="configure"><a href="#configure">Configure</a></h3>
+<ul>
+<li>GitHub Codespaces: <a href="./.devcontainer/devcontainer.json"><code>devcontainer.json</code></a> (<a href="https://containers.dev/implementors/json_reference/">Reference</a>)</li>
+<li>GitHub Action workflows: <a href="./.github/workflows"><code>.github/workflows</code></a> (<a href="https://docs.github.com/en/actions/using-workflows/workflow-syntax-for-github-actions">Reference</a>)</li>
+<li>Cargo package: <a href="./Cargo.toml"><code>Cargo.toml</code></a> (<a href="https://doc.rust-lang.org/cargo/reference/manifest.html">Reference</a>)</li>
+<li>Clippy (Rust linter): <a href="./.clippy.toml"><code>.clippy.toml</code></a> (<a href="https://github.com/rust-lang/rust-clippy">Repository</a>, <a href="https://rust-lang.github.io/rust-clippy/">Reference</a>)</li>
+<li>Rustfmt (Rust formatter): <a href="./.rustfmt.toml"><code>.rustfmt.toml</code></a> (<a href="https://github.com/rust-lang/rustfmt">Repository</a>, <a href="https://rust-lang.github.io/rustfmt/">Reference</a>)</li>
+</ul>
+<hr />
+<h2 id="library"><a href="#library">{{library}}</a></h2>
+<p>{{library description}}</p>
+<h3 id="install"><a href="#install">Install</a></h3><div class="example-wrap"><pre class="language-shell"><code>cargo add {{library}}</code></pre></div><h3 id="license"><a href="#license">License</a></h3>
+<p>This software is openly licensed and distributed under the <a href="./LICENSE">MIT License</a>.</p>
+<h3 id="contribution"><a href="#contribution">Contribution</a></h3>
+<p>Unless you explicitly state otherwise, any contribution intentionally submitted for inclusion in the work by you, as defined in the MIT license, shall be licensed as above, without any additional terms or conditions.
+Say hi to the entire world :)</p>
+</div></details></section></div></main><div id="rustdoc-vars" data-root-path="../" data-current-crate="rust_template" data-themes="ayu,dark,light" data-resource-suffix="" data-rustdoc-version="1.65.0-nightly (228710758 2022-09-10)" ></div></body></html>

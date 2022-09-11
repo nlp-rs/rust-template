@@ -1,5 +1,7 @@
 # Rust Repository Template 🦀
 [![License](https://img.shields.io/badge/license-MIT-green)](./LICENSE)
+[![CI](https://github.com/nlp-rs/rust-template/actions/workflows/main.yml/badge.svg)](https://github.com/nlp-rs/rust-template/actions/workflows/main.yml)
+[![Security audit](https://github.com/nlp-rs/rust-template/actions/workflows/security-audit.yml/badge.svg)](https://github.com/nlp-rs/rust-template/actions/workflows/security-audit.yml)
 
 Repository template to get quickly started with writing Rust libraries, ready for distributing.
 
@@ -11,7 +13,7 @@ Repository template to get quickly started with writing Rust libraries, ready fo
  - [x] CI/CD support with [GitHub Actions](https://github.com/features/actions), allowing to automate:
    - [x] Running tests and benchmarks
    - [x] Running Rustfmt and Clippy for detecting formatting and linting errors, respectively
-   - [x] Daily scheduled security audits of Rust packages with [`actions-rs/audit-check`](https://github.com/actions-rs/audit-check)
+   - [x] Daily, midnight scheduled security audits of Rust packages with [`actions-rs/audit-check`](https://github.com/actions-rs/audit-check)
    - [ ] Generating performance benchmark graphs, auto-publishing to GitHub Pages
    - [ ] Documentation of API docs and mdBook using GitHub Pages
    - [ ] Semantic version bumping, `CHANGELOG.md` updates, and new package releases
@@ -26,7 +28,8 @@ Repository template to get quickly started with writing Rust libraries, ready fo
 
 ----
 
-# Library name
+# {{library}}
+{{library description}}
 
 ## Install
 ```shell
@@ -34,7 +37,7 @@ cargo install {{library}}
 ```
 
 ## License
-This software is openly licensed and distributed under the [MIT License](LICENSE).
+This software is openly licensed and distributed under the [MIT License](./LICENSE).
 
 ## Contribution
 Unless you explicitly state otherwise, any contribution intentionally submitted for inclusion in the work by you, as defined in the MIT license, shall be licensed as above, without any additional terms or conditions.

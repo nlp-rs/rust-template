@@ -17,7 +17,7 @@ jobs:
     - name: Install Rust
       uses: actions-rs/toolchain@v1
       with:
-        toolchain: nightly
+        toolchain: stable
         override: true
         profile: minimal
     - name: Cache dependencies
@@ -41,7 +41,7 @@ jobs:
     - name: Install Rust
       uses: actions-rs/toolchain@v1
       with:
-        toolchain: nightly
+        toolchain: stable
         override: true
         profile: minimal
     - name: Cache dependencies
@@ -51,6 +51,8 @@ jobs:
     - name: Run tests
       uses: actions-rs/tarpaulin@v0.1
     - name: Run fuzz tests
+      timeout-minutes: 5
+      continue-on-error: true
       run: |
         cargo install cargo-fuzz
         cargo fuzz --version
@@ -60,6 +62,28 @@ jobs:
       with:
         token: ${{ secrets.CODECOV_TOKEN }}
         verbose: true
+
+  bench:
+    name: bench
+    runs-on: ubuntu-latest
+    needs: build
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v3
+    - name: Install Rust
+      uses: actions-rs/toolchain@v1
+      with:
+        toolchain: stable
+        override: true
+        profile: minimal
+    - name: Install Valgrind
+      run: sudo apt install -y valgrind
+    - name: Run benchmarks
+      uses: actions-rs/cargo@v1
+      with:
+        command: bench
+        args: --no-fail-fast
 
   fmt:
     name: rustfmt-check
@@ -72,7 +96,7 @@ jobs:
       - name: Install Rust
         uses: actions-rs/toolchain@v1
         with:
-          toolchain: nightly
+          toolchain: stable
           override: true
           profile: minimal
           components: rustfmt
@@ -97,7 +121,7 @@ jobs:
       - name: Install Rust
         uses: actions-rs/toolchain@v1
         with:
-          toolchain: nightly
+          toolchain: stable
           override: true
           profile: minimal
           components: clippy
@@ -121,7 +145,7 @@ jobs:
     - name: Install Rust
       uses: actions-rs/toolchain@v1
       with:
-        toolchain: nightly
+        toolchain: stable
         override: true
         profile: minimal
     - name: Cache dependencies
@@ -139,3 +163,19 @@ jobs:
       uses: JamesIves/github-pages-deploy-action@v4
       with:
         folder: target/doc
+
+  ci-success:
+    name: ci-success
+    if: ${{ success() }}
+    needs:
+      - build
+      - test
+      - bench
+      - clippy
+      - doc
+      - fmt
+      - test
+    runs-on: ubuntu-latest
+    steps:
+      - name: ✅ CI succeeded
+        run: exit 0

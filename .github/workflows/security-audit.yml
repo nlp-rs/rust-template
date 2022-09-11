@@ -1,5 +1,13 @@
 name: Security audit
 on:
+  pull_request:
+    paths:
+      - '**/Cargo.toml'
+      - '**/Cargo.lock'
+  push:
+    paths:
+      - '**/Cargo.toml'
+      - '**/Cargo.lock'
   schedule:
     # Run once a day at 00:00 (12:00AM or Midnight, UTC)
     # See POSIX cron syntax visualized at https://crontab.guru/#0_0_*_*_*

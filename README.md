@@ -18,7 +18,6 @@ Repository template to get quickly started with writing Rust libraries, ready fo
    - [ ] Documentation of API docs and mdBook using GitHub Pages
    - [ ] Semantic version bumping, `CHANGELOG.md` updates, and new package releases
 
-
 ## Configure
  - GitHub Codespaces: [`devcontainer.json`](./.devcontainer/devcontainer.json) ([Reference](https://containers.dev/implementors/json_reference/))
  - GitHub Action workflows: [`.github/workflows`](./.github/workflows) ([Reference](https://docs.github.com/en/actions/using-workflows/workflow-syntax-for-github-actions))

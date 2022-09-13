@@ -18,7 +18,7 @@ env:
 
   # documentation built from the `rustdoc` CLI tool
   ARTIFACT_API_DOCS: artifact-docs-api
-  DIR_SRC_API_DOCS: target/$PROJECT_NAME
+  DIR_SRC_API_DOCS: target/${{ env.PROJECT_NAME }}
   DIR_TARGET_API_DOCS: api-docs
 
   # documentation built from the `mdbook` CLI tool
@@ -60,8 +60,8 @@ jobs:
     - name: Upload artifact to ${{ env.DIR_SRC_API_DOCS }}
       uses: actions/upload-artifact@v3
       with:
-        name: $ARTIFACT_API_DOCS
-        path: $DIR_SRC_API_DOCS
+        name: ${{ env.ARTIFACT_API_DOCS }}
+        path: ${{ env.DIR_SRC_API_DOCS }}
 
   build-mdbook:
     runs-on: ubuntu-latest
@@ -95,8 +95,8 @@ jobs:
       - name: Upload artifact to ${{ env.DIR_SRC_MDBOOK }}
         uses: actions/upload-artifact@v3
         with:
-          name: $ARTIFACT_MDBOOK
-          path: $DIR_SRC_MDBOOK
+          name: ${{ env.ARTIFACT_MDBOOK }}
+          path: ${{ env.DIR_SRC_MDBOOK }}
 
   build-perf-bench-graphs:
     runs-on: ubuntu-latest
@@ -121,8 +121,8 @@ jobs:
       - name: Upload artifact to ${{ env.DIR_SRC_PERF_BENCH_GRAPHS }}
         uses: actions/upload-artifact@v3
         with:
-          name: $ARTIFACT_PERF_BENCH_GRAPHS
-          path: $DIR_SRC_PERF_BENCH_GRAPHS
+          name: ${{ env.ARTIFACT_PERF_BENCH_GRAPHS }}
+          path: ${{ env.DIR_SRC_PERF_BENCH_GRAPHS }}
 
   deploy-docs:
     if: ${{ success() }}

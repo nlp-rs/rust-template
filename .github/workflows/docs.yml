@@ -57,7 +57,7 @@ jobs:
     - name: Set index.html file
       run: echo "<meta http-equiv=\"refresh\" content=\"0; url=$PROJECT_NAME\">" > target/doc/index.html
     # Upload artifact so all documentation artifacts can be synced
-    - name: Upload artifact to $DIR_SRC_API_DOCS
+    - name: Upload artifact to ${{ env.DIR_SRC_API_DOCS }}
       uses: actions/upload-artifact@v3
       with:
         name: $ARTIFACT_API_DOCS
@@ -92,7 +92,7 @@ jobs:
       - name: Build documentation
         run: npm run build
       # Upload artifact so all documentation artifacts can be synced
-      - name: Upload artifact to $DIR_SRC_MDBOOK
+      - name: Upload artifact to ${{ env.DIR_SRC_MDBOOK }}
         uses: actions/upload-artifact@v3
         with:
           name: $ARTIFACT_MDBOOK
@@ -118,7 +118,7 @@ jobs:
           command: bench
           args: --no-fail-fast
       # Upload artifact so all documentation artifacts can be synced
-      - name: Upload artifact to $DIR_PERF_BENCH_GRAPHS
+      - name: Upload artifact to ${{ env.DIR_SRC_PERF_BENCH_GRAPHS }}
         uses: actions/upload-artifact@v3
         with:
           name: $ARTIFACT_PERF_BENCH_GRAPHS

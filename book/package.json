@@ -3,12 +3,10 @@
 	"scripts": {
 		"build": "mdbook build",
 		"start": "mdbook serve",
-		"deploy": "gh-pages -d ./book/html",
 		"lint": "markdownlint . --ignore node_modules",
 		"lint:fix": "npm run lint -- --fix"
 	},
 	"dependencies": {
-		"gh-pages": "4.0.0",
 		"markdownlint-cli": "0.31.1"
 	}
 }

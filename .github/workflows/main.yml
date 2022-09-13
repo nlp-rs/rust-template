@@ -135,35 +135,6 @@ jobs:
           token: ${{ secrets.GITHUB_TOKEN }}
           args: --all-features
 
-  doc:
-    name: build-doc
-    runs-on: ubuntu-latest
-
-    steps:
-    - name: Checkout repository
-      uses: actions/checkout@v3
-    - name: Install Rust
-      uses: actions-rs/toolchain@v1
-      with:
-        toolchain: stable
-        override: true
-        profile: minimal
-    - name: Cache dependencies
-      uses: Swatinem/rust-cache@v1.4.0
-      with:
-        sharedKey: full-build-cache
-    - name: Build documentation
-      uses: actions-rs/cargo@v1
-      with:
-        command: doc
-        args: --verbose --no-deps --lib
-    - name: Set index.html file
-      run: echo "<meta http-equiv=\"refresh\" content=\"0; url=scram\">" > target/doc/index.html
-    - name: Deploy
-      uses: JamesIves/github-pages-deploy-action@v4
-      with:
-        folder: target/doc
-
   ci-success:
     name: ci-success
     if: ${{ success() }}
@@ -172,7 +143,6 @@ jobs:
       - test
       - bench
       - clippy
-      - doc
       - fmt
       - test
     runs-on: ubuntu-latest

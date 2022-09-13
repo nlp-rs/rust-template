@@ -12,10 +12,10 @@ Repository template to get quickly started with writing Rust libraries, ready fo
  - [x] Performance benchmarks in Rust with Criterion and Iai (suitable to run in GitHub Actions CI environments)
  - [x] CI/CD support with [GitHub Actions](https://github.com/features/actions), allowing to automate:
    - [x] Running tests and benchmarks
-   - [x] Running Rustfmt and Clippy for detecting formatting and linting errors, respectively
+   - [x] Running [Rustfmt](https://github.com/rust-lang/rustfmt) and [Clippy](https://github.com/rust-lang/rust-clippy) for detecting formatting and linting errors, respectively
    - [x] Daily, midnight scheduled security audits of Rust packages with [`actions-rs/audit-check`](https://github.com/actions-rs/audit-check)
    - [ ] Generating performance benchmark graphs, auto-publishing to GitHub Pages
-   - [x] Documentation of API docs and mdBook using GitHub Pages
+   - [x] Documentation of API docs and [mdBook](https://github.com/rust-lang/mdBook) using GitHub Pages
    - [ ] Semantic version bumping, `CHANGELOG.md` updates, and new package releases
 
 ## Configure
@@ -24,6 +24,16 @@ Repository template to get quickly started with writing Rust libraries, ready fo
  - Cargo package: [`Cargo.toml`](./Cargo.toml) ([Reference](https://doc.rust-lang.org/cargo/reference/manifest.html))
  - Clippy (Rust linter): [`.clippy.toml`](./.clippy.toml) ([Repository](https://github.com/rust-lang/rust-clippy), [Reference](https://rust-lang.github.io/rust-clippy/))
  - Rustfmt (Rust formatter): [`.rustfmt.toml`](./.rustfmt.toml) ([Repository](https://github.com/rust-lang/rustfmt), [Reference](https://rust-lang.github.io/rustfmt/))
+
+## Run scripts locally
+ - Run unit/integration/doc tests: `cargo test`
+ - Run fuzz tests: `cargo fuzz <fuzz-target>`
+ - Run Rustfmt: `cargo fmt`
+ - Run Clippy: `cargo clippy`
+ - Run performance benchmarks: `cargo bench`
+ - Generate API docs for crate: `cargo doc`
+ - Generate mdBook docs for crate: `mdbook build`
+ - Run security audits: `cargo audit` (requires installing [`cargo-audit`](https://crates.io/crates/cargo-audit) locally)
 
 ----
 

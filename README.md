@@ -5,6 +5,18 @@
 
 Repository template to get quickly started with writing Rust libraries, ready for distributing.
 
+## Getting started
+Open your favorite terminal and clone this locally.
+ - With the [GitHub CLI](https://cli.github.com/) (replace `<project>` with what you'd like to call your project):
+   ```shell
+   gh repo create <project> --template nlp-rs/rust-template
+   ```
+
+ - With the Git CLI:
+   ```shell
+   git clone https://github.com/nlp-rs/rust-template.git
+   ```
+
 ## Features
  - [x] Remote development support with [GitHub Codespaces](https://github.com/features/codespaces)
  - [x] Debugging with the [LLDB Debugger](https://lldb.llvm.org/) tool in Visual Studio Code ([VSCode Marketplace](https://marketplace.visualstudio.com/items?itemName=vadimcn.vscode-lldb))

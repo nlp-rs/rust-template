@@ -28,6 +28,7 @@ Open your favorite terminal and clone this locally.
    - [x] Daily, midnight scheduled security audits of Rust packages with [`actions-rs/audit-check`](https://github.com/actions-rs/audit-check)
    - [ ] Generating performance benchmark graphs, auto-publishing to GitHub Pages
    - [x] Documentation of API docs and [mdBook](https://github.com/rust-lang/mdBook) using GitHub Pages
+   - [x] Linted commit messages with [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/) 
    - [ ] Semantic version bumping, `CHANGELOG.md` updates, and new package releases
 
 ## Configure
@@ -35,9 +36,11 @@ Open your favorite terminal and clone this locally.
 |--------------------------|--------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------|
 | GitHub Codespaces        | [`devcontainer.json`](./.devcontainer/devcontainer.json) | [Reference](https://containers.dev/implementors/json_reference/)                                                  |
 | GitHub Actions           | [`.github/workflows`](./.github/workflows)               | [Reference](https://docs.github.com/en/actions/using-workflows/workflow-syntax-for-github-actions)                |
-| Cargo package            | [`Cargo.toml` ](./Cargo.toml)                             | [Reference](https://doc.rust-lang.org/cargo/reference/manifest.html)                                              |
+| Cargo package            | [`Cargo.toml` ](./Cargo.toml)                            | [Reference](https://doc.rust-lang.org/cargo/reference/manifest.html)                                              |
 | Clippy (Rust linter)     | [`.clippy.toml`](./.clippy.toml)                         | [Repository](https://github.com/rust-lang/rust-clippy), [ Reference ]( https://rust-lang.github.io/rust-clippy/) |
 | Rustfmt (Rust formatter) | [`.rustfmt.toml`](./.rustfmt.toml)                       | [Repository](https://github.com/rust-lang/rustfmt), [ Reference](https://rust-lang.github.io/rustfmt/)         |
+| Commitlint               | [`.commitlintrc.json`](./..commitlintrc.json)            | [Repository](https://github.com/conventional-changelog/commitlint), [Reference](https://commitlint.js.org/#/) |
+
 ## Run scripts locally
  - Run unit/integration/doc tests: `cargo test`
  - Run fuzz tests: `cargo fuzz <fuzz-target>`
@@ -47,6 +50,7 @@ Open your favorite terminal and clone this locally.
  - Generate API docs for crate: `cargo doc`
  - Generate mdBook docs for crate: `mdbook build`
  - Run security audits: `cargo audit` (requires installing [`cargo-audit`](https://crates.io/crates/cargo-audit) locally)
+ - Lint commit messages: `npm run lint:commit` (requires installing [`commitlint`](https://commitlint.js.org/#/) locally with `npm install`)
 
 ----
 

@@ -11,7 +11,6 @@ Open your favorite terminal and clone this locally.
    ```shell
    gh repo create <project> --template nlp-rs/rust-template
    ```
-
  - With the Git CLI:
    ```shell
    git clone https://github.com/nlp-rs/rust-template.git
@@ -25,7 +24,7 @@ Open your favorite terminal and clone this locally.
  - [x] CI/CD support with [GitHub Actions](https://github.com/features/actions), allowing to automate:
    - [x] Running tests and benchmarks
    - [x] Running [Rustfmt](https://github.com/rust-lang/rustfmt) and [Clippy](https://github.com/rust-lang/rust-clippy) for detecting formatting and linting errors, respectively
-   - [x] Daily, midnight scheduled security audits of Rust packages with [`actions-rs/audit-check`](https://github.com/actions-rs/audit-check)
+   - [x] Daily, midnight scheduled audits of Rust packages (for outdated dependencies, compatible software licenses, and software vulnerabilities) with [`EmbarkStudios/cargo-deny-action`](https://github.com/EmbarkStudios/cargo-deny-action)
    - [ ] Generating performance benchmark graphs, auto-publishing to GitHub Pages
    - [x] Documentation of API docs and [mdBook](https://github.com/rust-lang/mdBook) using GitHub Pages
    - [x] Linted commit messages with [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/) 

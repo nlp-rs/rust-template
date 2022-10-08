@@ -10,6 +10,12 @@ jobs:
   build:
     name: build
     runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        toolchain:
+          - stable
+          - beta
+          - nightly
 
     steps:
     - name: Checkout repository
@@ -17,7 +23,7 @@ jobs:
     - name: Install Rust
       uses: actions-rs/toolchain@v1
       with:
-        toolchain: stable
+        toolchain: ${{ matrix.toolchain }}
         override: true
         profile: minimal
     - name: Cache dependencies

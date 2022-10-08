@@ -31,14 +31,15 @@ Open your favorite terminal and clone this locally.
    - [ ] Semantic version bumping, `CHANGELOG.md` updates, and new package releases
 
 ## Configure
-| Tool                     | File path                                                    | Reference                                                                                                             |
-|--------------------------|--------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------|
-| GitHub Codespaces        | [`devcontainer.json`](./.devcontainer/devcontainer.json) | [Reference](https://containers.dev/implementors/json_reference/)                                                  |
-| GitHub Actions           | [`.github/workflows`](./.github/workflows)               | [Reference](https://docs.github.com/en/actions/using-workflows/workflow-syntax-for-github-actions)                |
-| Cargo package            | [`Cargo.toml` ](./Cargo.toml)                            | [Reference](https://doc.rust-lang.org/cargo/reference/manifest.html)                                              |
+| Tool                     | File path                                                | Reference                                                                                                        |
+|--------------------------|----------------------------------------------------------|------------------------------------------------------------------------------------------------------------------|
+| GitHub Codespaces        | [`devcontainer.json`](./.devcontainer/devcontainer.json) | [Reference](https://containers.dev/implementors/json_reference/)                                                 |
+| GitHub Actions           | [`.github/workflows`](./.github/workflows)               | [Reference](https://docs.github.com/en/actions/using-workflows/workflow-syntax-for-github-actions)               |
+| Cargo package            | [`Cargo.toml` ](./Cargo.toml)                            | [Reference](https://doc.rust-lang.org/cargo/reference/manifest.html)                                             |
 | Clippy (Rust linter)     | [`.clippy.toml`](./.clippy.toml)                         | [Repository](https://github.com/rust-lang/rust-clippy), [ Reference ]( https://rust-lang.github.io/rust-clippy/) |
-| Rustfmt (Rust formatter) | [`.rustfmt.toml`](./.rustfmt.toml)                       | [Repository](https://github.com/rust-lang/rustfmt), [ Reference](https://rust-lang.github.io/rustfmt/)         |
-| Commitlint               | [`.commitlintrc.json`](./..commitlintrc.json)            | [Repository](https://github.com/conventional-changelog/commitlint), [Reference](https://commitlint.js.org/#/) |
+| Rustfmt (Rust formatter) | [`.rustfmt.toml`](./.rustfmt.toml)                       | [Repository](https://github.com/rust-lang/rustfmt), [ Reference](https://rust-lang.github.io/rustfmt/)           |
+| Commitlint               | [`.commitlintrc.json`](./..commitlintrc.json)            | [Repository](https://github.com/conventional-changelog/commitlint), [Reference](https://commitlint.js.org/#/)    |
+| `cargo-deny`             | [`deny.toml`](./deny.toml)                               | [Repository](https://github.com/EmbarkStudios/cargo-deny)                                                        |
 
 ## Run scripts locally
  - Run unit/integration/doc tests: `cargo test`

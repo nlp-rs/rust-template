@@ -150,7 +150,6 @@ jobs:
       - bench
       - clippy
       - fmt
-      - test
     runs-on: ubuntu-latest
     steps:
       - name: ✅ CI succeeded

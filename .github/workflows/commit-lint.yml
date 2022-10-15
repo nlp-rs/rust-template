@@ -22,7 +22,7 @@ jobs:
     # H.T to https://stackoverflow.com/a/67365254/7368162
     - name: Run commitlint
       run: >
-        npx commitlint --
+        npx commitlint
           --from=$GITHUB_BASE_REF
           --to=$GITHUB_HEAD_REF
           --verbose

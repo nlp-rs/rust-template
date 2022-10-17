@@ -29,7 +29,7 @@ Open your favorite terminal and clone this locally.
    - [ ] Generating performance benchmark graphs, auto-publishing to GitHub Pages
    - [x] Documentation of API docs and [mdBook](https://github.com/rust-lang/mdBook) using GitHub Pages
    - [x] Linted commit messages with [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/) 
-   - [ ] Semantic version bumping, `CHANGELOG.md` updates, and new package releases
+   - [x] Semantic version bumping, `CHANGELOG.md` updates, and new package releases
 
 ## Configure
 | Tool                     | File path                                                | Reference                                                                                                        |
@@ -39,7 +39,7 @@ Open your favorite terminal and clone this locally.
 | Cargo package            | [`Cargo.toml` ](./Cargo.toml)                            | [Reference](https://doc.rust-lang.org/cargo/reference/manifest.html)                                             |
 | Clippy (Rust linter)     | [`.clippy.toml`](./.clippy.toml)                         | [Repository](https://github.com/rust-lang/rust-clippy), [ Reference ]( https://rust-lang.github.io/rust-clippy/) |
 | Rustfmt (Rust formatter) | [`.rustfmt.toml`](./.rustfmt.toml)                       | [Repository](https://github.com/rust-lang/rustfmt), [ Reference](https://rust-lang.github.io/rustfmt/)           |
-| Commitlint               | [`.commitlintrc.json`](./..commitlintrc.json)            | [Repository](https://github.com/conventional-changelog/commitlint), [Reference](https://commitlint.js.org/#/)    |
+| Commitlint               | [`.commitlintrc.json`](./.commitlintrc.json)            | [Repository](https://github.com/conventional-changelog/commitlint), [Reference](https://commitlint.js.org/#/)    |
 | `cargo-deny`             | [`deny.toml`](./deny.toml)                               | [Repository](https://github.com/EmbarkStudios/cargo-deny)                                                        |
 
 ## Run scripts locally

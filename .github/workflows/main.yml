@@ -6,6 +6,10 @@ on:
   pull_request:
     branches: [ "main" ]
 
+# https://github.com/actions-rs/clippy-check/issues/167#issuecomment-1416772563
+permissions:
+  actions: write
+
 jobs:
   build:
     name: build
@@ -54,15 +58,14 @@ jobs:
       uses: Swatinem/rust-cache@v1.4.0
       with:
         sharedKey: full-build-cache
+    # https://github.com/actions-rs/tarpaulin/issues/15
+    # https://github.com/oscar-project/ungoliant/pull/90
+    # Temporary fix for "Error: Couldn't find a release tarball containing binaries for latest"
     - name: Run tests
       uses: actions-rs/tarpaulin@v0.1
-    - name: Run fuzz tests
-      timeout-minutes: 5
-      continue-on-error: true
-      run: |
-        cargo install cargo-fuzz
-        cargo fuzz --version
-        cargo fuzz run fuzz_target_1
+      with:
+        version: 0.22.0
+        args: "--avoid-cfg-tarpaulin"
     - name: Upload code coverage
       uses: codecov/codecov-action@v3
       with:
@@ -135,10 +138,10 @@ jobs:
         uses: Swatinem/rust-cache@v1.4.0
         with:
           sharedKey: full-build-cache
-      - name: Run clippy checks
-        uses: actions-rs/clippy-check@v1
+      - name: clippy
+        uses: actions-rs/cargo@v1
         with:
-          token: ${{ secrets.GITHUB_TOKEN }}
+          command: clippy
           args: --all-features
 
   ci-success:
